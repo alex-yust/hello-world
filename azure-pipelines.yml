@@ -27,7 +27,9 @@ steps:
   displayName: 'Set up the Go workspace'
 
 - script: |
+    set -x
     go get github.com/sirupsen/logrus
+    uname -a
     go run test.go
   displayName: 'Run Go test'
   workingDirectory: '$(modulePath)'
